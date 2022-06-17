@@ -1,0 +1,79 @@
+{
+  "name": "stylelint-config-dalton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:joe-peak/stylelint-config-dalton.git",
+  "author": "lon.c.zhou@gmail.com",
+  "license": "MIT",
+  "description": "stylelint 配置",
+  "scripts": {
+    "lint": "yarn lint:format && yarn lint:es && yarn lint:style",
+    "lint-fix": "yarn lint:format-fix && yarn lint:es-fix && yarn lint:style-fix",
+    "lint:format": "prettier './src/**/*.{js,jsx,ts,tsx,css,scss,html,json,md}'",
+    "lint:format-fix": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,scss,html,json,md}'",
+    "lint:es": "eslint src --ext js,jsx,ts,tsx",
+    "lint:es-fix": "eslint src --ext js,jsx,ts,tsx --fix",
+    "lint:style": "stylelint 'src/**/*.{css,scss,html}'",
+    "lint:style-fix": "stylelint 'src/**/*.{css,scss,html}' --fix",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.8.0"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-dalton"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "./index.js"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{css,scss,html}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.17.0",
+    "eslint-config-dalton": "^1.0.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1"
+  }
+}
