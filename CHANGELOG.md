@@ -1,3 +1,5 @@
+## [1.0.2](https://github.com/joe-peak/stylelint-config-dalton/compare/v1.0.1...v1.0.2) (2022-06-21)
+
 ## 1.0.1 (2022-06-20)
 
 ### Features
