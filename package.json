@@ -22,26 +22,6 @@
     "node": ">= 12.0.0",
     "npm": ">= 6.0.0"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-dalton"
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "./index.js"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "prettier": {
-    "printWidth": 120,
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
