@@ -18,6 +18,20 @@
 yarn add -D stylelint stylelint-config-dalton
 ```
 
+#### 项目的配置
+
+在项目的 package.json 中添加 `stylelint`配置项或者在项目根目录中创建对应的 `.stylelintrc` 文件进行相应配置
+
+#### package.json stylelint
+
+```json
+{
+  "stylelint": {
+    "extends": ["stylelint-config-dalton"]
+  }
+}
+```
+
 ## 开发
 
 ```bash
