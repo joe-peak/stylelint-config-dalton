@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-dalton",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "git@github.com:joe-peak/stylelint-config-dalton.git",
   "author": "lon.c.zhou@gmail.com",
